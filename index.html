@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Survey Form</title>
-  </head>
-  <body>
-    <main id="main">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Survey Form</title>
+</head>
+
+<body>
+  <main id="main">
+    <div id="content-container">
       <h1 id="title">Cars Manufacturer</h1>
       <p id="description">Let us know your dream car</p>
       <form action="#" id="survey-form">
@@ -16,39 +18,20 @@
           <label for="name" id="name-label">
             Name
             <br />
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Type in your name"
-              required
-            />
+            <input type="text" name="name" id="name" placeholder="Type in your name" required />
           </label>
           <br />
           <label for="email" id="email-label">
             Email
             <br />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Type in your email"
-              required
-            />
+            <input type="email" name="email" id="email" placeholder="Type in your email" required />
           </label>
           <br />
           <label for="number" id="number-label">
             Number
             <br />
-            <input
-              type="number"
-              name="number"
-              id="number"
-              placeholder="Type in your number"
-              required
-              min="1111111"
-              max="9999999"
-            />
+            <input type="number" name="number" id="number" placeholder="Type in your number" min="1111111" max="9999999"
+              required />
           </label>
         </div>
 
@@ -107,9 +90,13 @@
           </label>
         </div>
 
-        <div class="form-div"><button id="submit">Submit</button></div>
+        <div class="form-div">
+          <button id="submit">Submit</button>
+        </div>
       </form>
-    </main>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-  </body>
+    </div>
+  </main>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
 </html>

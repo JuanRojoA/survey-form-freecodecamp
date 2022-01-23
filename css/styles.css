@@ -1,3 +1,14 @@
+:root {
+  --primary-background-color: hsl(0, 0%, 85%);
+  --secondary-background-color: hsl(219, 66%, 11%);
+  --input-background-color: hsla(0, 0%, 100%, 0.85);
+  --title-color: hsl(0, 0%, 100%);
+  --primary-text-color: hsl(0, 0%, 80%);
+  --secondary-text-color: hsl(0, 0%, 0%);
+  --border-color: hsla(0, 0%, 80%, 0.5);
+  --shadow-color: hsl(0, 0%, 60%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,60 +20,111 @@ html {
 }
 
 body {
+  background-color: var(--primary-background-color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
-  font-family: sans-serif;
-  background-color: hsl(210, 100%, 75%);
 }
 
 #main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+#content-container {
+  width: 95%;
+  max-width: 500px;
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0 0 var(--shadow-color);
+  background-color: var(--secondary-background-color);
+  color: var(--primary-text-color);
 }
 
 #title {
-  margin: 3rem 0 0.5rem 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--title-color);
+  border-bottom: 0.1rem solid var(--border-color);
+}
+
+#description {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
 }
 
 #survey-form {
-  margin: 3rem 0;
-  padding: 3rem;
-  width: 95%;
-  max-width: 600px;
-  border-radius: 1rem;
-  box-shadow: 0.5rem 0.5rem 0 0 hsla(220, 100%, 50%, 0.3);
-  background-color: hsl(210, 40%, 90%);
+  width: 100%;
 }
 
 .form-div {
-  margin-bottom: 2rem;
+  width: 100%;
+  padding: 1rem 0;
+  border-bottom: 0.1rem solid var(--border-color);
 }
 
-input,
-textarea,
-select {
+.form-div:nth-of-type(6) {
+  border-bottom: none;
+}
+
+label,
+.form-div p {
+  display: inline-block;
   width: 100%;
-  height: 4rem;
-  margin: 0.5rem 0;
-  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+#dropdown,
+#textarea,
+#submit {
+  width: 100%;
+  height: 3rem;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
   border: none;
   border-radius: 0.5rem;
+  font-size: 1.3rem;
+  background-color: var(--input-background-color);
+  color: var(--secondary-text-color);
 }
 
-textarea {
-  min-height: 150px;
-  padding: 1rem;
+#dropdown {
+  padding-left: 0;
+  line-height: 3rem;
+  text-align: center;
 }
 
-[type="checkbox"],
-[type="radio"] {
-  width: max-content;
-  height: max-content;
+#textarea {
+  resize: vertical;
+  margin-top: 0.5rem;
+  padding: 1rem 0 0 1rem;
+  width: 100%;
+  height: 100px;
 }
 
-button {
-  width: 20rem;
-  height: 3rem;
+#submit {
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+
+#submit:hover {
+  background-color: var(--shadow-color);
+}
+
+#submit:active {
+  transform: scale(0.95);
 }
