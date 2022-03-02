@@ -102,6 +102,13 @@ input[type="number"],
   color: var(--secondary-text-color);
 }
 
+input[type="checkbox"],
+input[type="radio"],
+.adjustments-label,
+.car_type-label {
+  cursor: pointer;
+}
+
 #dropdown {
   padding-left: 0;
   line-height: 3rem;
@@ -119,6 +126,7 @@ input[type="number"],
 #submit {
   font-size: 1.5rem;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 #submit:hover {
